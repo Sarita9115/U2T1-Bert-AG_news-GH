@@ -19,6 +19,6 @@ feature_based:
 finetune:
   num_train_epochs: 2
   batch_size: 16
-  lr_head: 1e-3
-  lr_encoder: 2e-5
+  lr_head: 1.0e-3
+  lr_encoder: 2.0e-5
   unfrozen_layers: 2
