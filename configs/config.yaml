@@ -1,0 +1,22 @@
+seed: 42
+
+paths:
+  output_dir: "/content/drive/MyDrive/AG_news_topic/outputs"
+
+data:
+  dataset_name: "fancyzhx/ag_news"
+  train_subsample: 10000
+  test_subsample: 2000
+  max_length: 128
+
+feature_based:
+  model_name: "bert-base-uncased"
+  pooling: "cls"
+
+finetune:
+  model_name: "bert-base-uncased"
+  num_train_epochs: 2
+  batch_size: 16
+  lr_head: 1e-3
+  lr_encoder: 2e-5
+  unfrozen_layers: 2
