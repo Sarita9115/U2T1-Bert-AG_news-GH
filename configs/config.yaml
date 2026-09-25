@@ -9,12 +9,14 @@ data:
   test_subsample: 2000
   max_length: 128
 
+models:
+  dev: "distilbert-base-uncased"   # para iterar rápido / debug del pipeline
+  final: "bert-base-uncased"       # el que se entrega y se publica en HF Hub
+
 feature_based:
-  model_name: "bert-base-uncased"
-  pooling: "cls"
+  pooling: "cls"          # "cls" o "mean"
 
 finetune:
-  model_name: "bert-base-uncased"
   num_train_epochs: 2
   batch_size: 16
   lr_head: 1e-3
