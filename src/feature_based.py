@@ -66,7 +66,7 @@ def run_feature_based(model_name, train_tok, test_tok, device, pooling="cls"):
     feature_time = time.time() - t0
 
     t0 = time.time()
-    clf = LogisticRegression(max_iter=1000, multi_class="multinomial")
+    clf = LogisticRegression(max_iter=1000)
     clf.fit(X_train, y_train)
     train_time = time.time() - t0
 
