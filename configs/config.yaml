@@ -1,0 +1,24 @@
+seed: 42
+
+paths:
+  output_dir: "/content/drive/MyDrive/AG_news_topic/outputs"
+
+data:
+  dataset_name: "fancyzhx/ag_news"
+  train_subsample: 10000
+  test_subsample: 2000
+  max_length: 128
+
+models:
+  dev: "distilbert-base-uncased"   # para iterar rápido / debug del pipeline
+  final: "bert-base-uncased"       # el que se entrega y se publica en HF Hub
+
+feature_based:
+  pooling: "cls"          # "cls" o "mean"
+
+finetune:
+  num_train_epochs: 2
+  batch_size: 16
+  lr_head: 1.0e-3
+  lr_encoder: 2.0e-5
+  unfrozen_layers: 2
