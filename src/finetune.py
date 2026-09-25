@@ -102,6 +102,7 @@ def run_finetune(model_name, train_tok, test_tok, config, output_dir):
         report_to="none",
         load_best_model_at_end=True,
         metric_for_best_model="f1_macro",
+        seed=config["seed"],   # <- default de HF
     )
 
     trainer = Trainer(
