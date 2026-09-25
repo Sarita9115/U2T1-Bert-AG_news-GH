@@ -59,7 +59,7 @@ Delivered model: partial fine-tuning on bert-base-uncased, published at
 3. Clone this repo inside the Colab runtime:
    ```bash
    git clone https://github.com/Sarita9115/U2T1-Bert-AG_news-GH.git
-   cd U2T1-Bert_in_AG_news
+   cd U2T1-Bert-AG_news-GH
    pip install -r requirements.txt
    ```
 4. Run the notebook cells in order. `configs/config.yaml` controls the
